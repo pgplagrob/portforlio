@@ -1,11 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/portforlio",
-  assetPrefix: "/portforlio/",
-  images: {
-    unoptimized: true,
-  },
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  // ปล่อยว่างไว้ก่อน
 };
 
 export default nextConfig;
