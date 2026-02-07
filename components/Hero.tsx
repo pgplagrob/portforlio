@@ -9,7 +9,7 @@ export default function Hero() {
           {/* LEFT: TEXT */}
           <div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="text-purple-400">L</span>
+              Hi, im <span className="text-purple-400">L</span>
             </h1>
 
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
@@ -32,14 +32,15 @@ export default function Hero() {
           </div>
 
           {/* RIGHT: IMAGE */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-400 shadow-lg">
+           <div className="flex justify-center md:justify-end">
+             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-400 shadow-lg">
               <Image
-                src="/profile.png"
+                src="/Image.png"
                 alt="Profile"
-                fill
-                className="object-cover"
-                priority
+                width={320}
+               height={320}
+               className="w-full h-full object-cover"
+               priority
               />
             </div>
           </div>
