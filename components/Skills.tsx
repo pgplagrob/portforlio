@@ -9,7 +9,7 @@ import {
   SiPython 
 } from "react-icons/si";
 
-type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "Expert";
+type SkillLevel = "Beginner" | "Intermediate" | "Advanced" ;
 
 type Skill = {
   name: string;
@@ -21,37 +21,37 @@ type Skill = {
 const skills: Skill[] = [
   { 
     name: "HTML5", 
-    level: "Advanced", 
+    level: "Intermediate", 
     icon: <SiHtml5 className="w-12 h-12" />,
     color: "from-orange-500 to-orange-600"
   },
   { 
     name: "CSS3", 
-    level: "Advanced", 
+    level: "Intermediate", 
     icon: <SiCss3 className="w-12 h-12" />,
     color: "from-blue-500 to-blue-600"
   },
   { 
     name: "JavaScript", 
-    level: "Expert", 
+    level: "Intermediate", 
     icon: <SiJavascript className="w-12 h-12" />,
     color: "from-yellow-400 to-yellow-500"
   },
   { 
     name: "React", 
-    level: "Intermediate", 
+    level: "Beginner", 
     icon: <SiReact className="w-12 h-12" />,
     color: "from-cyan-400 to-cyan-500"
   },
   { 
     name: "Next.js", 
-    level: "Intermediate", 
+    level: "Beginner", 
     icon: <SiNextdotjs className="w-12 h-12" />,
     color: "from-white to-gray-400"
   },
   { 
     name: "Python", 
-    level: "Intermediate", 
+    level: "Beginner", 
     icon: <SiPython className="w-12 h-12" />,
     color: "from-blue-400 to-yellow-400"
   },
@@ -62,7 +62,6 @@ const getLevelWidth = (level: SkillLevel): string => {
     case "Beginner": return "25%";
     case "Intermediate": return "50%";
     case "Advanced": return "75%";
-    case "Expert": return "100%";
     default: return "0%";
   }
 };

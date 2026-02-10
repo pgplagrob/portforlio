@@ -24,11 +24,11 @@ export default function Navbar() {
           </a>
         </li>
     
-        <li >
+        {/* <li >
           <a href="#projects" className="hover:text-purple-300 transition cursor-pointer">
           Projects
           </a>
-        </li>
+        </li> */}
 
         <li >
           <a href="#contact" className="hover:text-purple-300 transition cursor-pointer">
