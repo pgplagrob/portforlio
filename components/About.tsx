@@ -1,107 +1,155 @@
+// components/About.tsx
 "use client";
 
 import React from "react";
-import { FaCode, FaLaptopCode, FaRocket, FaPalette } from "react-icons/fa";
+import Image from "next/image";
+import { FaCode, FaLaptopCode, FaRocket, FaDatabase } from "react-icons/fa";
 
-const highlights = [
+const skills = [
   {
-    icon: <FaCode className="w-8 h-8" />,
+    icon: <FaCode className="w-6 h-6" />,
     title: "Clean Code",
-    description: "เขียนโค้ดที่อ่านง่าย บำรุงรักษาได้ และปฏิบัติตาม best practices",
     color: "from-blue-500 to-cyan-500",
   },
   {
-    icon: <FaLaptopCode className="w-8 h-8" />,
+    icon: <FaLaptopCode className="w-6 h-6" />,
     title: "Responsive Design",
-    description: "ออกแบบให้ทำงานได้ลื่นไหลบนทุกอุปกรณ์และหน้าจอ",
     color: "from-purple-500 to-pink-500",
   },
   {
-    icon: <FaRocket className="w-8 h-8" />,
+    icon: <FaRocket className="w-6 h-6" />,
     title: "Performance",
-    description: "เพิ่มประสิทธิภาพเว็บไซต์ให้โหลดเร็วและทำงานได้อย่างราบรื่น",
     color: "from-orange-500 to-red-500",
   },
   {
-    icon: <FaPalette className="w-8 h-8" />,
-    title: "UI/UX Focus",
-    description: "ใส่ใจประสบการณ์ผู้ใช้และความสวยงามของอินเทอร์เฟซ",
+    icon: <FaDatabase className="w-6 h-6" />,
+    title: "Full Stack Development",
     color: "from-green-500 to-emerald-500",
   },
 ];
 
-export default function About() {
-  return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center bg-[#0a0118] text-white py-20 px-6 relative overflow-hidden scroll-mt-28"
+  export default function About() {
+    return (
+      <section
+        id="about"
+        className="min-h-screen flex items-center justify-center bg-[#0a0118] text-white py-10 px-6 relative overflow-hidden"
     >
-      {/* Background Orbs */}
-      <div className="absolute top-40 right-20 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+      {/* Background Gradient Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto relative z-10 max-w-6xl">
+      <div className="container mx-auto max-w-6xl relative z-10">
         
         {/* Header */}
-        <header className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-            เกี่ยวกับฉัน
-          </h2>
-        </header>
+<div className="text-left mb-12 md:mb-16">
+  <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+    About Me
+  </h2>
+</div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          
-          {/* Left Column - Personal Info & Education */}
-          <div className="space-y-6">
-            
-            {/* Personal Info */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">🎯 ประวัติส่วนตัว</h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                สวัสดีครับ! ผมชื่อ <span className="text-purple-400 font-semibold">วีรภัทร พันกลับ</span> 
-                เป็น Frontend Developer ที่มีความหลงใหลในการพัฒนาเว็บไซต์และสร้างประสบการณ์ผู้ใช้ที่ดี
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                ผมเริ่มต้นเขียนโค้ดตั้งแต่ [ปีที่เริ่ม] และพัฒนาทักษะมาอย่างต่อเนื่อง โดยเฉพาะ React, Next.js และ Modern Web Technologies
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                เป้าหมายของผมคือการสร้างเว็บไซต์ที่สวยงาม ใช้งานได้จริง มีประสิทธิภาพสูง และตอบโจทย์ผู้ใช้งาน
-              </p>
-            </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-16 md:mt-20">
 
-            {/* Education */}
-            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">📚 การศึกษา</h3>
-              <div className="space-y-3">
-                <div>
-                  <h4 className="text-lg font-semibold">ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี</h4>
-                </div>
-                <div className="h-px bg-white/10"></div>
-                <div>
-                  <h4 className="text-lg font-semibold">Online Courses</h4>
-                  <p className="text-gray-400">futureskill, freeCodeCamp</p>
-                </div>
+          
+          {/* Left Side - Profile Image + Skills */}
+          <div className="flex flex-col items-center space-y-12">
+            
+            {/* Profile Image with Glow */}
+            {/* <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+              <div className="relative">
+                <Image
+                  src="/profile.jpg"
+                  alt="Profile"
+                  width={350}
+                  height={350}
+                  className="rounded-full object-cover border-4 border-purple-500/30"
+                  priority
+                />
               </div>
+            </div> */}
+
+            {/* Skills Badges */}
+            <div className="grid grid-cols-2 gap-4 w-full max-w-md pt-4">
+              {skills.map((skill, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 px-5 py-4 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:scale-105"
+                >
+                  <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${skill.color} p-2 flex items-center justify-center`}>
+                    {skill.icon}
+                  </div>
+                  <span className="text-sm font-medium text-gray-300">
+                    {skill.title}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right Column - Highlights */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {highlights.map((item, idx) => (
-              <div
-                key={idx}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-              >
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} p-3 mb-4 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  {item.icon}
+          {/* Right Side - About Info */}
+          <div className="space-y-20">
+            
+            {/* Name & Aspiration */}
+            <div>
+              <p className="text-2xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                I'm weraphat pankab
+              </p>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                ผมอยากเป็น Full Stack Developer และกำลังเรียนรู้การสร้างเว็บไซต์และแอปพลิเคชันครบวงจร
+              </p>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
+              <p>
+                ผมกำลังฝึกฝนทักษะใน React, Next.js, Node.js และเทคโนโลยีสมัยใหม่ 
+                เพื่อสร้างโซลูชันที่ปรับแต่งได้และตอบโจทย์ทั้ง Frontend และ Backend
+              </p>
+            </div>
+
+            {/* Specialties */}
+            {/* <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-purple-500/10 border border-purple-500/30 rounded-xl hover:bg-purple-500/20 transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <FaCode className="w-6 h-6" />
                 </div>
-                {/* Content */}
-                <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                <span className="text-lg font-medium text-purple-300">
+                  Web Application Development
+                </span>
               </div>
-            ))}
+
+              <div className="flex items-center gap-4 p-4 bg-purple-500/10 border border-purple-500/30 rounded-xl hover:bg-purple-500/20 transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center">
+                  <FaLaptopCode className="w-6 h-6" />
+                </div>
+                <span className="text-lg font-medium text-purple-300">
+                  Mobile Application Development
+                </span>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 bg-purple-500/10 border border-purple-500/30 rounded-xl hover:bg-purple-500/20 transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
+                  <FaRocket className="w-6 h-6" />
+                </div>
+                <span className="text-lg font-medium text-purple-300">
+                  Problem Solving & Learning
+                </span>
+              </div>
+            </div> */}
+
+            {/* Education & Courses */}
+            <div className="pt-6 space-y-3 border-t border-white/10">
+              <div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">การศึกษา</p>
+                <p className="text-white font-medium">ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">Online Courses</p>
+                <p className="text-gray-400">• FutureSkill • freeCodeCamp </p>
+              </div>
+            </div>
+
           </div>
 
         </div>

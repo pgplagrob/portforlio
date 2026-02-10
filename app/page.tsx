@@ -4,11 +4,12 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 
 
+
 export default function Home() {
   return (
-    <main className="bg-[#0a0118]">
+    <main className="bg-[#0a0118] min-h-screen">
       <Hero />
-      <About />
+        <About />
       <Skills />
     </main>
   );
