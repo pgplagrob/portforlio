@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar"; // หรือตามตำแหน่งที่ไฟล์อยู่จริง
 
 export const metadata = {
   title: "L Portfolio",
